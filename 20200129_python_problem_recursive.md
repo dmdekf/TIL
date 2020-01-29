@@ -125,7 +125,7 @@ merge sort
 
 제곱근구하기
 
-
+![image-20200129174434733](D:\Git\TIL\20200129_python_problem_recursive.assets\image-20200129174434733.png)
 
 
 
