@@ -4,13 +4,13 @@
 
 #### 제어문
 
-##### **index와 함께 `for` 문 활용!!! 중요 -enemerate()**
+##### **index와 함께 `for` 문 활용!!! 중요 -enumerate()**
 
 > iterable > squence
 
 > iterable = sequence + dict + 순회가능한 객체(generator를 이용하여....)
 
-`enumerate`(*iterable*, *start=0*)
+`enumerate`(*iterable*, *start=0*) tuple return
 
 ```
 Init signature: enumerate(iterable, start=0)
@@ -23,8 +23,6 @@ Return an enumerate object.
 열거 객체(???????????)를 돌려줍니다. *iterable* 은 시퀀스, [이터레이터](https://docs.python.org/ko/3.6/glossary.html#term-iterator) 또는 이터레이션을 지원하는 다른 객체여야 합니다. [`enumerate()`](https://docs.python.org/ko/3.6/library/functions.html#enumerate) 에 의해 반환된 이터레이터의 [`__next__()`](https://docs.python.org/ko/3.6/library/stdtypes.html#iterator.__next__) 메서드는 카운트 (기본값 0을 갖는 *start* 부터)와 *iterable* 을 이터레이션 해서 얻어지는 값을 포함하는 튜플을 돌려줍니다.
 
 <center><img src="https://user-images.githubusercontent.com/18046097/61180439-44e60d80-a651-11e9-9adc-e60fa57c2165.png", alt="container"/></center>
-
-
 
 ```
 for menu in enumerate(lunch):
@@ -58,7 +56,7 @@ lunch.index('샤브샤브')
 ```
 book_title =  ['great', 'expectations', 'the', 'adventures', 'of', 'sherlock', 'holmes', 'the', 'great', 'gasby', 'hamlet', 'adventures', 'of', 'huckleberry', 'fin']
 title_counter = {}
-(1) for 문 활용
+# (1) for 문 활용
 for title in book_title:
     if title in title_counter:
         title_counter[title] += 1
@@ -67,25 +65,25 @@ for title in book_title:
  
 {'great': 2, 'expectations': 1, 'the': 2, 'adventures': 2, 'of': 2, 'sherlock': 1, 'holmes': 1, 'gasby': 1, 'hamlet': 1, 'huckleberry': 1, 'fin': 1}
 
-(2) .count() 쓰기
+# (2) .count() 쓰기
 title_counter = {}
 for title in book_title:
     title_counter[title] = book_title.count(title)
 print(title_counter)
 
 title_counter = {}
-for title in set(book_title): # 순회요소의 중복값을 제거한 set이용.
+for title in set(book_title): # 순회요소의 중복값을 제거한 set이용.순회횟수최소화
     title_counter[title] = book_title.count(title)
 print(title_counter)
 
-(3) .get() method #초기값 initializing 가능. 
+# (3) .get() method #초기값 initializing 가능. 
 title_counter = {}
 
 for title in book_title:
     title_counter[title] = title_counter.get(title,0) +1
 print(title_counter)
 
-(4) collentions.Counter(스퀀스형자료) 사용 from collections import Counter 
+# (4) collentions.Counter(스퀀스형자료) 사용 from collections import Counter 
 from collections import Counter
 print(collections.Counter(book_title))
 print(dict(Counter(book_title)))
@@ -100,6 +98,17 @@ print(max(dict(Counter(book_title)).values()))
 
 ```
 numbers.split(sep=None, maxsplit=-1)
+Docstring:
+Return a list of the words in the string, using sep as the delimiter string.
+
+sep
+  The delimiter according which to split the string.
+  None (the default value) means split according to any whitespace,
+  and discard empty strings from the result.
+maxsplit
+  Maximum number of splits to do.
+  -1 (the default value) means no limit.
+Type:      builtin_function_or_method
 ```
 
 `map(적용할 함수 이름, 적용할 iterable)`

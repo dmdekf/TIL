@@ -6,7 +6,7 @@
 
 <문제풀이>
 
-`sorted(key, reverse)`
+`sorted(key, reverse)`  list return
 
 ```
 Signature: sorted(iterable, /, *, key=None내가 원하는 함수기준을 적용 가능., reverse=False)
@@ -35,14 +35,12 @@ def is_triangular(num):
     return True if (((1+8*num)**0.5 - 1) / 2) == int((((1+8*num)**0.5 - 1) / 2)) else False
 ```
 
-```python
-def check_score(answer, mine):
-    return max(0,sum([4 if a == m else -1 for a, m in list(zip(answer, mine)) ]))
-```
+
 
 ```python
 def check_score(answer, mine):
-    return max(0,sum([4 if a == m else -1 for a, m in list(zip(answer, mine)) if m])) 빈스트링은('') false
+    return max(0,sum([4 if a == m else -1 for a, m in list(zip(answer, mine)) if m])) 
+# if m 빈스트링은('') false
 ```
 
 max(0,x)
@@ -59,11 +57,7 @@ With two or more arguments, return the largest argument.
 Type:      builtin_function_or_method
 ```
 
-sorted(x)
-
-집합의 요소를 정렬한 리스트를 return함.
-
-
+`sorted(x)` list return
 
 ### 재귀 함수(recursive function)
 
