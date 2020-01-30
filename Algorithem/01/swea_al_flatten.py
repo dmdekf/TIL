@@ -3,13 +3,18 @@ for tc in range(1,11):
     case_num=list(map(int,input().split()))
     num_num=[0]*100
     cnt = 0
-    for _ in range(try_num-1):
-        for index in range(100-1):
-            swap = False
-            for index2 in range(100 -index-1,):
-                if case_num[index2] > case_num[index2+1]:
-                    case_num[index2] , case_num[index2+1] =  case_num[index2+1], case_num[index2]
-                    swap = True
+    dump = []
+    for i in case_num:
+        if num_num[i] = i:
+            num_num[i] +=1
+
+    for _ in range(try_num):
+        for idx, in enumerate(num_num):
+            if not i:
+
+
+
+
                 if swap == False:
                     break
             case_num[0] +=1
