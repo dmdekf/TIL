@@ -3,25 +3,21 @@ for tc in range(1,11):
     case_num=list(map(int,input().split()))
     num_num=[0]*100
     cnt = 0
-    dump = []
     for i in case_num:
-        if num_num[i] = i:
+        if num_num[i] =i:
             num_num[i] +=1
 
     for _ in range(try_num):
-        for idx, in enumerate(num_num):
-            if not i:
+        for idx,i in enumerate(num_num):
+            if i:
+                num_num[idx] -=1
+                num_num[idx+1] +=1
+                break
+        for idx2,i in enumerate(num_num):
+            if num_num[-idx2]:
+                num_num[-idx2] -=1
+                num_num[-idx2-1] +=1
+                break
+        cnt = idx+1-idx2-1+100
 
-
-
-
-                if swap == False:
-                    break
-            case_num[0] +=1
-            case_num[-1] -=1
-
-
-        # for i in case_num:
-        #     num_num[i] +=1
-        # for index in
-    print('#{} {}'.format(tc,result))
+    print('#{} {}'.format(tc,cnt))
