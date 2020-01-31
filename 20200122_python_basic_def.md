@@ -24,7 +24,6 @@ Return an enumerate object.
 
 <center><img src="https://user-images.githubusercontent.com/18046097/61180439-44e60d80-a651-11e9-9adc-e60fa57c2165.png", alt="container"/></center>
 
-
 ```
 for menu in enumerate(lunch):
     print(menu)
@@ -248,30 +247,6 @@ for i in range(10):
 
 조건문과 반복문, break를 활용하여 다음 headlines 리스트의 요소들을 130자 크기의 하나의 문자열로 이어 붙이는 코드를 작성하세요.
 
-``` 
-
-```
-
-```
-headlines = [
-    "Local Bear Eaten by Man",
-    "Legislature Announces New Laws",
-    "Peasant Discovers Violence Inherent in System",
-    "Cat Rescues Fireman Stuck in Tree",
-    "Brave Knight Runs Away",
-    "Papperbok Review: Totally Triffic"
-]
-news_join = ''
-
-for headline in headlines:
-    news_join += headline + ' '
-    if len(news_join) > 130:
-        news_join = news_join[:130]
-        print(news_join)
-        break
-print(' '.join(headlines)[:130])
-```
-
 #### 문제풀이 /problems/02_control_of_flow_00
 
 ##### 모음 제거하기
@@ -322,14 +297,6 @@ for month, day_count in calendar.items():
             count = 0
     print()
 ```
-
-
-
-
-
-
-
-
 
 
 
