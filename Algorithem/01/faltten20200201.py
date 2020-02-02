@@ -22,17 +22,18 @@ for tc in range(1,11):
                 else:
                     minnum =idx+1
                 mincnt =False
-            if num_num[-idx] and maxcnt :
-                num_num[-idx] -=1
-                num_num[-idx-1] +=1
-                if num_num[-idx]:
-                    maxnum = -idx+100
+            if num_num[-idx-1] and maxcnt :
+                num_num[-idx-1] -=1
+                num_num[-idx-2] +=1
+                if num_num[-idx-1]:
+                    maxnum = -idx-1+101
                 else:
-                    maxnum = -idx+99
+                    maxnum = -idx-2+101
                 maxcnt = False
+            if (maxnum - minnum)==0 or (maxnum - minnum)==1 :
+                break
             if not (maxcnt and mincnt):
                 break
-    print(cnt,maxnum,minnum)
     cnt = maxnum - minnum
 
     print('#{} {}'.format(tc,cnt))
