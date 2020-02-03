@@ -43,7 +43,7 @@ def check_score(answer, mine):
 # if m 빈스트링은('') false
 ```
 
-max(0,x)
+max(0,sum) -> 최소값 0부터 sum한 최대값을 return
 
 ```
 Docstring:
@@ -95,10 +95,6 @@ def factorial(num):
 
 첫번째 실행된 함수는 리턴값이 오기 전까지 끝나지 않는다. (나의 리턴값에 함수가 되어있으므로 모든 함수계산이 끝날 때 끝남.)
 
-
-
-
-
 python sroted()
 
 쪼개서 부분을 sort하고 합칠 때 다시 sort...
@@ -131,7 +127,7 @@ wolframalpa: 수식 풀어주는 사이트.
 
 
 
-주피터노트북 에러
+주피터노트북 에러 열리지 않을 경우.
 
 json에러해결
 
