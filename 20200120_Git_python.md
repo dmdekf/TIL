@@ -205,6 +205,179 @@ https://github.com/scl2589/wordchain/invitations 혹은 이메일 확인하여 �
 나의 repo->내원격저장소: pull & push
 ```
 
+#### (4)  git lab
+
+- ```ba
+    622  git log --oneline --graph
+    623  git branch yunji
+    624  git branch
+    625  git status
+    626  git switch yunji
+    627  git status
+    628  git add .
+    629  code .
+    630  git status
+    631  git commit -m "Add swea_d1,d2,d3"
+    632  git switch master
+    633  git status
+    634  git switch yunji
+    635  git push origin yunji
+    636  git switch master
+    637  git branch -d yunji
+  
+  ```
+
+- 
+
+
+
+다른폴더 건드리지 말기
+master x
+나만의 브랜치 만들기 - 분리된 세계다. 망하면 날리고 마스터에서 풀로 갖오기.
+
+#### **Branching 분리된 세계/일회용!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!** 습관 들이기.
+
+#### **branch 는 원래 평등**하다. 하지만 `master`가 주가 되도록 커밋을 해야 중심을 잡기 쉽다. 
+
+release branches == test branches  
+
+feature branches ex) login, ... 등등 기능의 구현 브랜치로 일회성이 많다. 
+
+![git-flow_overall_graph](assets/git-flow_overall_graph.png)
+
+```bash
+multicampus@DESKTOP-KVCQHCD MINGW64 ~/goldenbell (master)
+$ git branch
+* master
+
+multicampus@DESKTOP-KVCQHCD MINGW64 ~/goldenbell (master)
+$ git branch yunji
+
+multicampus@DESKTOP-KVCQHCD MINGW64 ~/goldenbell (master)
+$ git branch
+* master
+  yunji
+
+multicampus@DESKTOP-KVCQHCD MINGW64 ~/goldenbell (master)
+$ git switch yunji
+Switched to branch 'yunji'
+
+multicampus@DESKTOP-KVCQHCD MINGW64 ~/goldenbell (yunji)
+
+multicampus@DESKTOP-KVCQHCD MINGW64 ~/goldenbell (master)
+$ git branch -d yunji
+Deleted branch yunji (was 1eb7c43).
+#브랜치 만들면서 이동하기. git switch -c yunji == git checkout -b yunji
+multicampus@DESKTOP-KVCQHCD MINGW64 ~/branching (master)
+$ git switch -c yunji
+
+Switched to a new branch 'yunji'
+
+multicampus@DESKTOP-KVCQHCD MINGW64 ~/branching (yunji)
+
+
+
+```
+
+#### merge  주체가 되는 브랜치로 이동 후 !!! master
+
+**branch 는 원래 평등**하다. 하지만 `master`가 주가 되도록 커밋을 해야 중심을 잡기 쉽다. 
+
+
+
+![image-20200205134444948](assets/image-20200205134444948.png)
+
+1. FF-merge(git이 자동으로 merge) - Auto (개별 브랜치들이 충돌하지 않을 때.)
+
+   파일 간 충돌이 없을 때. 커밋의 내용이 다른 파일들 혹은 파일 내의 수정이 없는 경우.
+
+   commit에  merge로그 남기는 것이 default
+
+   ```bash
+   $ git log --oneline
+   24e874a (HEAD -> master) Merge branch 'yunji'
+   
+   ```
+
+2. Merge conflict - 두가지 진실일 때만. 
+
+![image-20200205135820601](assets/image-20200205135820601.png)
+
+```bash
+CONFLICT (add/add): Merge conflict in README.md
+Auto-merging README.md
+Automatic merge failed; fix conflicts and then commit the result.
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      README.md
+$ git commit -m "Resolve comflicts"
+```
+
+
+
+```bash
+multicampus@DESKTOP-KVCQHCD MINGW64 ~/branching (yunji)
+$ git switch master
+Switched to branch 'master'
+
+multicampus@DESKTOP-KVCQHCD MINGW64 ~/branching (master)
+$ git merge yunji
+Updating f90bdee..3a6774b
+Fast-forward
+ c.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c.txt
+
+```
+
+#### branch는 일회용. 지우기
+
+```bash
+multicampus@DESKTOP-KVCQHCD MINGW64 ~/branching (master)
+$ git branch -d yunji
+Deleted branch yunji (was 3a6774b).
+
+multicampus@DESKTOP-KVCQHCD MINGW64 ~/branching (master)
+$ git branch
+* master
+
+```
+
+#### 주의사항. head - >마스터 인지 확인하기.
+
+```bash
+multicampus@DESKTOP-KVCQHCD MINGW64 ~/branching (master)
+$ git log --oneline
+3a6774b (HEAD -> master) Add c.txt
+f90bdee Add b.txt
+2d09146 Add a.txt
+
+```
+
+
+
+#### request
+
+merge
+
+content adventing? 
+
+deep copy가 아닌 작업물만 copy..
+
+
+
+
+
+
+
+
+
 ## 2. Python
 
 `cp`  ''복사할 파일의 주소''  ''복사할 장소''
@@ -276,3 +449,11 @@ print(num)
 이노데이터 월터 아이작스 - 컴퓨팅 역사 관련 도서.
 
 hiw big is sha 256 - youtube
+
+
+
+QA팀 : pro/testors 모든 테스트를 하는 팀. 
+
+git 연습하기사이트.
+
+https://git-school.github.io/visualizing-git/ 
