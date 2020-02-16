@@ -119,9 +119,11 @@ Graph Crash Course
 
 ### Graph란?
 
+
+
 - `정점(Node)` == `꼭지점(Vertex)`
   - **위치**를 의미한다.
-- `간선(Edge)`==`아크(Arc)`
+- `간선(Edge)`==`아크(Arc)` == link == branch
   - **위치 간의 관계를 표시한 선**을 의미한다.
 - **인접 정점(Adjacent Vertex)**
   - 간선으로 직접 연결된 정점(노드)
@@ -158,9 +160,46 @@ visited = [], stack = []
 
 
 
+## Graph와 Tree의 차이
 
+- 트리는 그래프 중에 속한 특별한 종류라고 볼 수 있음
 
+<div style="text-align:left">
+<table>
+  <tr>
+    <th></th>
+    <th style="text-align:center">그래프</th>
+    <th style="text-align:center">트리</th>
+  </tr>
+  <tr>
+    <td style="text-align:center">정의</td>
+    <td style="text-align:left">노드와 노드를 연결하는 간선으로 표현되는 자료 구조</td>
+    <td style="text-align:left">그래프의 한 종류, 방향성이 있는 비순환 그래프</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">방향성</td>
+    <td style="text-align:left">방향 그래프, 무방향 그래프 둘다 존재함</td>
+    <td style="text-align:left">방향 그래프만 존재함</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">사이클</td>
+    <td style="text-align:left">사이클 가능함, 순환 및 비순환 그래프 모두 존재함</td>
+    <td style="text-align:left">비순환 그래프로 사이클이 존재하지 않음</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">루트 노드</td>
+    <td style="text-align:left">루트 노드 존재하지 않음</td>
+    <td style="text-align:left">루트 노드 존재함</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">부모/자식 관계</td>
+    <td style="text-align:left">부모 자식 개념이 존재하지 않음</td>
+    <td style="text-align:left">부모 자식 관계가 존재함</td>
+  </tr>
+</table>
+</div>
 
+-출처 : fastcampus Chapter17-그래프 이해 강의자료
 
 
 
