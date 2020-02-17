@@ -103,7 +103,7 @@ random.randint(1,5) -> 두번째 인자까지 포함.
 
 
 
-`random.shuffle(name)`   
+`random.shuffle(name)`  !!!!!!!!!!!!!!!!!!!!!!!!! 
 
  return  값이 없고 원본을 변경시킴.
 
@@ -299,7 +299,7 @@ finally:
 
 
 
-#### `raise`  예외 발생시키기.
+#### `raise`  내가 만드는 예외 발생시키기.
 
 ```
 raise ValueError('5개 이상 데이터는 조회가 불가')
@@ -309,13 +309,46 @@ ValueError: 5개 이상 데이터는 조회가 불가
 
 
 
+```
+def my_div(num1, num2):
+    try:
+        result = num1 / num2
+    except ZeroDivisionError as err:
+        print(f'{err} 오류가 발생하였습니다.')
+    except:
+        raise ValueError('숫자를 넣어주세요')
+    else:
+        return result
+        
+   ------------
+   TypeError: unsupported operand type(s) for /: 'str' and 'str'
 
+During handling of the above exception, another exception occurred:
 
+ValueError                                Traceback (most recent call last)
+<ipython-input-37-3d341525df1c> in <module>
+      1 # 해당 코드를 통해 올바른 결과가 나오는지 확인하세요.
+      2 # my_div(1, 0)
+----> 3 my_div('1', '5')
 
+<ipython-input-36-1498b5e66361> in my_div(num1, num2)
+      7         print(f'{err} 오류가 발생하였습니다.')
+      8     except:
+----> 9         raise ValueError('숫자를 넣어주세요')
+     10     else:
+     11         return result
 
+ValueError: 숫자를 넣어주세요
 
+```
 
+#### assert
 
+```
+assert Boolean expression, error message
+# 참일 경우에는 pass, 아닐 경우 Error
+assert type(1) == int, '문자열을 입력하였습니다.'
+```
 
 
 
@@ -343,14 +376,6 @@ ValueError: 5개 이상 데이터는 조회가 불가
 
 
 
-
-
-
-
-
-
-
-
 python version
 
 `3`.7.3
@@ -358,30 +383,6 @@ python version
 맨 앞 버전 : symentic version(major version Breaks the API)  : 의미가 있는 버전.다른 버전과 호환성이 파괴된다.
 
 ![](assets/1_c2lrK2Bqvntq1p-frD2KcQ.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -407,7 +408,9 @@ haruair : 호주 -> 미국  김용균 님 비전공자.
 
 
 
+tdd :test 견고한 코딩.vs tdd is dead
 
+test부터 먼저 짠다. assert를 짬. 그 후 코딩 시작. 에러 처리가 용이.
 
 
 
