@@ -68,24 +68,6 @@ class FirstChild(Mom, Dad):  -->class Mom(Person):gene = 'XX'을 받음.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## tip
 
 
