@@ -102,7 +102,7 @@ multicampus@DESKTOP-KVCQHCD MINGW64 ~/TIL (master)
 
 ```
 
-- `remote` (원격저장소 연결 )`add` (저장소 추가) 저장소의 이름(별명) 저장소의 주소
+- `remote` (원격저장소 연결 )`add` (저장소 추가) `저장소의 이름(별명)` `저장소의 주소`
 
 ```
 $ git remote add origin https://github.com/dmdekf/TIL.git
@@ -224,7 +224,7 @@ https://github.com/scl2589/wordchain/invitations 혹은 이메일 확인하여 �
     635  git push origin yunji
     636  git switch master
     637  git branch -d yunji
-  
+    
   ```
 
 - 
