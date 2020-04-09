@@ -146,7 +146,7 @@ GET : 정보 가져오기
 
 ![image-20200406141348390](assets/image-20200406141348390.png)
 
-url 변수화.
+url 변수화. - url 주소 의 변화에 대응하기 편하기 위하여.
 
 {% url 'index' %}
 
@@ -176,9 +176,18 @@ get_object_or_404
 >
 > app/static/appname/images....
 
+```bash
+curl -i google.io
+sudo apt-get install telnetd
+```
+
 
 
 # tip
 
 명령어 :  복수형(여러가지를 관리할 때.)
+
+HTTP
+
+postman
 
