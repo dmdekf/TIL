@@ -153,9 +153,3 @@ backtrack(arr, 0, [0]*arr_len, 0)def backtrack(arr, idx, N, selected, sum_num):
     sum_num -= arr[idx]
 ```
 
-### 
-
-```
-
-```
-
