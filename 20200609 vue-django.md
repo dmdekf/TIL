@@ -34,6 +34,9 @@
       ...
   ]
   
+  # WHITELIST
+  CORS_ORIGIN_ALLOW_ALL = True
+  
   
   ```
 
@@ -79,7 +82,7 @@ django-rest-auth
 
 
 
-- 
+
 
 ```
 vue create [project]
