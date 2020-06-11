@@ -17,15 +17,14 @@ npm run build
 - .vue file 구성.
 
   - <template>
-        
+    
     </template>
 
   - <script>
-        
     </script>
-
-  - <style>
-        
+    
+- <style>
+    
     </style>
 
 
